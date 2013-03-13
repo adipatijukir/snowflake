@@ -19,7 +19,7 @@ public class SnowFlake {
 		angleStep = (float) ((Math.random() * Math.PI / 16) + Math.PI / 32);
 		this.x = x;
 		fallSpeed = (float) (Math.random() * 10 + 1);
-		y = 58 * fallSpeed;
+		y = 56 * fallSpeed;
 		lateralPower = (float) (Math.random() * 10 + 0.1);
 		flakeImage = new Image("res/snowflake.png");
 		rotationSpeed = (float) (Math.PI * Math.random() / 16);
@@ -54,7 +54,7 @@ public class SnowFlake {
     public void reset(float x) {
 		angle = (float) (Math.random() * 2 * Math.PI);
 		angleStep = (float) ((Math.random() * Math.PI / 16) + Math.PI / 32);
-		y = 0;
+		y = -15;
 		this.x = x;
 		fallSpeed = (float) (Math.random() * 10 + 1);
 		rotationSpeed = (float) (Math.PI * Math.random() / 16);
