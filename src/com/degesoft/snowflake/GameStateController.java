@@ -2,10 +2,6 @@ package com.degesoft.snowflake;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.StateBasedGame;
 
-/**
- * 
- * @author Johan
- */
 public class GameStateController extends StateBasedGame {
     public GameStateController() {
         super("SnowFlakes");

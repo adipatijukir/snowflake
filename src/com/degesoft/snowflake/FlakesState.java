@@ -16,17 +16,11 @@ public class FlakesState extends BasicGameState {
     }
 
     void startGame(GameContainer container) throws SlickException {
-        /*camera = new Camera();
-        pizzaWorld = new PizzaWorld(camera);
-        pizzaWorld.init(container);*/
     	field = new flakesField(800, 600);
     }
 
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
-        /*if (pizzaWorld != null) {
-            pizzaWorld.render(container, g);
-        }*/
     	if (field != null)
     		field.render(container, g);
     }
@@ -35,14 +29,10 @@ public class FlakesState extends BasicGameState {
     public void enter(GameContainer container, StateBasedGame game) throws SlickException {
         super.enter(container, game);
         startGame(container);
-        /*music = new Music(soundPaths[random.nextInt(soundPaths.length)]);
-        music.play(1.0f, musicVolume);
-        music.addListener(this);*/
     }
 
     @Override
     public void leave(GameContainer container, StateBasedGame game) {
-        /*music.fade(500, 0.0f, true);*/
     }
 
     @Override
@@ -51,19 +41,8 @@ public class FlakesState extends BasicGameState {
         container.setMaximumLogicUpdateInterval(msPerUpdate);
     }
 
-    // We are using a fixed update rate
     @Override
     public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException {
-        /*if (pizzaWorld != null) {
-            camera.update(delta);
-            pizzaWorld.update(container, delta);
-
-            if (pizzaWorld.isGameOver()) {
-                GameOverState state = (GameOverState) game.getState(GameOverState.ID);
-                state.setVictory(pizzaWorld.isVictory());
-                game.enterState(GameOverState.ID, new FadeOutTransition(Color.black, 1600), new FadeInTransition());
-            }
-        }*/
     	if (field!= null)
     		field.update(container, delta);
     }

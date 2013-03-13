@@ -47,7 +47,6 @@ public class SnowFlake {
     }
     
     public void render(GameContainer slickContainer, Graphics g) {
-    	//g.drawImage(flakeImage, this.getX(), this.getY());
     	g.drawImage(flakeImage, this.getX(), this.getY(), this.getX() + flakeImage.getWidth() * scale, this.getY() + flakeImage.getHeight() * scale, 0, 0, flakeImage.getWidth(), flakeImage.getHeight());
     }
     
