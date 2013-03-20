@@ -17,6 +17,7 @@ public class FlakesState extends BasicGameState {
 
     void startGame(GameContainer container) throws SlickException {
     	field = new flakesField(800, 600);
+    	container.setShowFPS(false);
     }
 
     @Override
